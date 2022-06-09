@@ -1,8 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react';
+import {FiPlus, FiMinus} from 'react-icons/fi'
 
-function Question() {
+function Question({question}) {
+    const [showAnswer, setShowAnswer] = useState(false)
   return (
-    <div>Question</div>
+    <article className='question'>
+        <header>
+            <h3>{question.title}</h3>
+        </header>
+        <button className='icon'>
+            {showAnswer ? <FiMinus /> :  <FiPlus />}
+        </button>
+        {showAnswer && (<div>
+            <p>{question.info}</p>
+        </div>)}
+    </article>
   )
 }
 
