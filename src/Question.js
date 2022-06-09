@@ -5,13 +5,14 @@ function Question({question}) {
     const [showAnswer, setShowAnswer] = useState(false)
   return (
     <article className='question'>
-        <header>
+        <header className='q-header'>
             <h3>{question.title}</h3>
-        </header>
-        <button className='icon'>
+        
+        <button className='icon' onClick={()=>setShowAnswer(!showAnswer)}>
             {showAnswer ? <FiMinus /> :  <FiPlus />}
         </button>
-        {showAnswer && (<div>
+        </header>
+        {showAnswer && (<div className='answer'>
             <p>{question.info}</p>
         </div>)}
     </article>

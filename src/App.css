@@ -8,7 +8,7 @@ main{
 }
 .container{
   width: 70%;
-  height: 72%;
+  min-height: 70%;
   background-color: #fff;
   border-radius: 10px;
   padding:20px;
@@ -24,16 +24,37 @@ main{
   border-radius: 10px;
   padding:0.8rem 1.2rem;
   margin-bottom: 1rem;
+
+  width:700px;
+  min-height: 80px;
+  box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);;
+}
+.question h3{
+  margin-bottom: 0;
+}
+.question p{
+  font-size: 1.1rem;
+}
+.q-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width:700px;
-  height: 100px;
-  box-shadow:  0 5px 15px rgba(0, 0, 0, 0.1);;
 }
 .title{
   margin-right:15px;
 }
 .icon{
-  paddiing:10px;
+  color:crimson;
+  border:none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items:center;
+}
+.answer{
+  padding-bottom:10px;
 }
